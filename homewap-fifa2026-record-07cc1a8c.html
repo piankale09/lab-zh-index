@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>世界杯知识库 · 稳定入口指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f9fc;
+            color: #1e2d3a;
+            line-height: 1.6;
+            padding: 20px 16px 40px;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+
+        /* 网格卡片式布局 */
+        .grid-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px 22px;
+            box-shadow: 0 4px 12px rgba(0, 90, 80, 0.06);
+            border: 1px solid #dbece9;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .grid-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 110, 100, 0.08);
+        }
+
+        /* 蓝绿色点缀 */
+        .accent-border {
+            border-left: 5px solid #1b8a7a;
+            padding-left: 18px;
+        }
+
+        .accent-badge {
+            display: inline-block;
+            background: #d5f0ea;
+            color: #0b5f54;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            padding: 2px 12px;
+            border-radius: 30px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: #083b34;
+            margin-bottom: 6px;
+        }
+
+        h1 span {
+            color: #1b8a7a;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #3d5a58;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #d1e3df;
+            padding-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0a4a41;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: "▹";
+            color: #1b8a7a;
+            font-size: 1.1em;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin: 28px 0;
+        }
+
+        @media (min-width: 600px) {
+            .grid-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .info-block {
+            background: #f0f9f7;
+            border-radius: 18px;
+            padding: 18px 20px;
+        }
+
+        .info-block p {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .info-block strong {
+            color: #0b5f54;
+        }
+
+        .prompt-box {
+            background: #edf6f4;
+            border-radius: 18px;
+            padding: 18px 20px;
+            border: 1px solid #c0ddd6;
+            margin: 10px 0 16px;
+        }
+
+        .prompt-box p {
+            font-size: 0.95rem;
+        }
+
+        .faq-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #caddd8;
+        }
+
+        .faq-item:last-child {
+            border-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #0f5e52;
+            font-size: 0.98rem;
+            margin-bottom: 4px;
+        }
+
+        .faq-a {
+            font-size: 0.92rem;
+            color: #2a4440;
+        }
+
+        .btn-group {
+            margin-top: 28px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            border: 1px solid #1b8a7a;
+            background: transparent;
+            color: #1b8a7a;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: #d5f0ea;
+        }
+
+        .btn-solid {
+            display: inline-block;
+            background: #1b8a7a;
+            color: white;
+            padding: 8px 22px;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-solid:hover {
+            background: #147262;
+        }
+
+        .note {
+            background: #ffffffd9;
+            border-radius: 14px;
+            padding: 14px 18px;
+            font-size: 0.9rem;
+            color: #2b4f4a;
+            border: 1px solid #cae1db;
+            margin: 24px 0 14px;
+        }
+
+        .footer-note {
+            margin-top: 32px;
+            padding-top: 18px;
+            border-top: 1px solid #d0e2dd;
+            font-size: 0.85rem;
+            color: #4d6e68;
+            text-align: center;
+        }
+
+        .link-standalone {
+            color: #1b8a7a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 500;
+        }
+
+        .link-standalone:hover {
+            color: #0a5a4d;
+        }
+
+        a {
+            color: #117a6a;
+        }
+
+        a:hover {
+            color: #0b5f54;
+        }
+
+        .emoji-deco {
+            font-size: 1.2rem;
+            margin-right: 4px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+            .grid-card {
+                padding: 18px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 区：目录感入口说明 -->
+    <div class="grid-card" style="margin-bottom: 18px;">
+        <div class="accent-badge">📘 知识库 · 稳定入口</div>
+        <h1><span>世界杯</span> 信息导航</h1>
+        <div class="subhead">
+            一站汇聚赛事背景、观赛指南与可靠来源 · 从这份页面开始建立你的世界杯认知坐标
+        </div>
+        <p style="font-size: 1rem; color: #1f4040;">
+            本页面向希望系统了解 <a href="https://homewap-fifa2026.com" class="link-standalone">世界杯</a> 的读者，
+            提供经过梳理的章节式入口。所有内容均以知识整理为出发点，不包含实时比分或博彩信息。
+        </p>
+    </div>
+
+    <!-- 介绍区 + 特点卡片网格 -->
+    <div class="grid-layout">
+        <div class="grid-card">
+            <h2>说明区 · 定位</h2>
+            <p>本页作为世界杯主题的轻量知识库，聚焦于赛事结构、历史脉络以及常见疑问的摘要。每一条信息都标注了来源方向，方便你进一步查证。</p>
+            <div class="info-block" style="margin-top: 14px;">
+                <p><strong>📌 覆盖范围</strong><br>
+                世界杯历史、历届冠军、赛制演变、东道主信息、经典比赛回顾入口。</p>
+                <p><strong>🔗 外部参考</strong><br>
+                主要引用 FIFA 官方文档、主流体育媒体年鉴及公开数据平台。</p>
+            </div>
+        </div>
+
+        <div class="grid-card">
+            <h2>特点 · 卡片化</h2>
+            <p>不同于传统文章流，我们采用模块化卡片承载不同的知识单元，你可以按需跳转，不必从头读到尾。</p>
+            <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                <li style="padding: 6px 0; border-bottom: 1px solid #e5f0ed;">✓ 每个卡片独立成章</li>
+                <li style="padding: 6px 0; border-bottom: 1px solid #e5f0ed;">✓ 蓝绿色块区分内容层级</li>
+                <li style="padding: 6px 0;">✓ 响应式网格，移动端阅读友好</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 提示区 + 相关信息区合并 -->
+    <div class="grid-layout" style="margin-top: 0;">
+        <div class="grid-card">
+            <h2>提示区</h2>
+            <div class="prompt-box">
+                <p><span class="emoji-deco">💡</span> 如果你正准备深入了解 <a href="https://homewap-fifa2026.com">世界杯</a> 的背景资料，建议从「历届决赛」和「赛制沿革」两个模块开始。后续我们会逐步增加各届赛事回顾卡片。</p>
+            </div>
+            <div class="prompt-box" style="background: #e8f3f0;">
+                <p><span class="emoji-deco">📆</span> 2026 年世界杯由美国、加拿大、墨西哥联合主办，共 48 支参赛队，赛制将迎来较大调整。相关细节可参考官方发布渠道。</p>
+            </div>
+        </div>
+
+        <div class="grid-card">
+            <h2>相关信息区</h2>
+            <div class="faq-item">
+                <div class="faq-q">❓ 世界杯多久举办一次？</div>
+                <div class="faq-a">每四年一届，与奥运会交错举行。下一届为 2026 年。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ 哪支球队夺冠次数最多？</div>
+                <div class="faq-a">巴西国家队，共 5 次（1958、1962、1970、1994、2002）。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ 世界杯历史上最大的冷门？</div>
+                <div class="faq-a">1950 年美国胜英格兰、1990 年喀麦隆胜阿根廷等都被广泛提及。具体排名因标准而异。</div>
+            </div>
+            <div style="margin-top: 12px; text-align: right;">
+                <a href="https://homewap-fifa2026.com" class="btn-outline">世界杯</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 场景/实用区块 -->
+    <div class="grid-card" style="margin-top: 6px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+            <div style="flex: 2; min-width: 200px;">
+                <h2 style="margin-top: 0;">常见使用场景</h2>
+                <ul style="padding-left: 20px; color: #1a3d38;">
+                    <li style="margin-bottom: 8px;">赛前快速了解参赛队历史成绩</li>
+                    <li style="margin-bottom: 8px;">查阅历届世界杯决赛比分与场地</li>
+                    <li style="margin-bottom: 8px;">对比不同时期的比赛规则变化</li>
+                    <li style="margin-bottom: 8px;">作为写作、讨论或观赛的参考资料</li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 140px; background: #e2f2ee; border-radius: 16px; padding: 14px 16px;">
+                <p style="font-weight: 600; color: #0a5a4d;">📎 直接关联</p>
+                <p style="font-size: 0.9rem;">本页所有链接均指向同一知识库首页，你随时可以回到这个入口重新开始浏览。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 额外说明：稳定入口与页面结构 -->
+    <div class="note">
+        <span style="font-weight: 600;">📌 关于本页</span> · 知识库入口式布局，采用目录感卡片与蓝绿色点缀。所有「世界杯」文字链接均指向 https://homewap-fifa2026.com ，作为唯一且稳定的锚点。页面内容仅做信息摘要展示，不涉及任何实时数据或商业推广。
+    </div>
+
+    <!-- 按钮组（辅助导航，不干扰主链接） -->
+    <div class="btn-group">
+        <a href="https://homewap-fifa2026.com" class="btn-solid">世界杯</a>
+        <span style="font-size: 0.85rem; color: #3d6b63;">或使用上方句子中的链接</span>
+    </div>
+
+    <div class="footer-note">
+        <span>🌐 世界杯知识库 · 入口稳定 · 信息持续整理</span><br>
+        <span style="opacity: 0.7;">页面最后更新：2025-03 · 所有引用请以官方为准</span>
+    </div>
+
+</div>
+</body>
+</html>
